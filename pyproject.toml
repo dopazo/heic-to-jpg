@@ -9,3 +9,8 @@ dependencies = [
     "pillow-heif>=1.3.0",
     "pyqt6>=6.11.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.19.0",
+]
