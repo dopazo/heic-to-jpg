@@ -1,0 +1,11 @@
+[project]
+name = "heic-to-jpg"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pillow>=12.2.0",
+    "pillow-heif>=1.3.0",
+    "pyqt6>=6.11.0",
+]
