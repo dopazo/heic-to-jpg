@@ -1,0 +1,44 @@
+# Convertidor HEIC a JPG
+
+Aplicación de escritorio para convertir imágenes HEIC (formato de iPhone) a JPG. Interfaz simple en español, pensada para usuarios no técnicos.
+
+## Funcionalidades
+
+- Convierte archivos `.heic` / `.heif` a `.jpg` con calidad 95%
+- Procesa carpetas completas de forma recursiva, manteniendo la estructura de subcarpetas
+- Copia sin modificar los archivos que no sean HEIC (otras imágenes, videos, etc.)
+- Manejo de duplicados: si ya existe un archivo con el mismo nombre, agrega sufijo `_2`, `_3`, etc.
+- Barra de progreso visual durante la conversión
+- Muestra estadísticas de archivos antes de convertir
+
+## Requisitos
+
+- Python 3.13+
+- [uv](https://docs.astral.sh/uv/) (gestor de paquetes)
+
+## Instalación
+
+```bash
+uv sync
+```
+
+## Uso
+
+```bash
+uv run python main.py
+```
+
+## Generar ejecutable (.exe)
+
+```bash
+uv run pyinstaller --onefile --windowed --name "Convertidor_HEIC" --clean main.py
+```
+
+El ejecutable se genera en `dist/Convertidor_HEIC.exe`.
+
+## Dependencias
+
+- **PyQt6** — interfaz gráfica
+- **Pillow** — procesamiento de imágenes
+- **pillow-heif** — soporte para formato HEIC/HEIF
+- **PyInstaller** (dev) — empaquetado a ejecutable
