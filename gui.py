@@ -26,15 +26,15 @@ COLORS = {
     "bg": "#faf6f1",
     "surface": "#ffffff",
     "surface_hover": "#f0ebe4",
-    "border": "#ddd2c4",
+    "border": "#c4b5a3",
     "text": "#2c2417",
-    "text_secondary": "#8a7d6b",
-    "accent": "#c4693d",
-    "accent_hover": "#d47a4e",
+    "text_secondary": "#6b5d4d",
+    "accent": "#b85a2e",
+    "accent_hover": "#c96a3e",
     "success": "#3d8b3d",
     "error": "#c44040",
-    "progress_bg": "#e8dfd4",
-    "progress_fill": "#c4693d",
+    "progress_bg": "#e0d5c7",
+    "progress_fill": "#b85a2e",
 }
 
 STYLESHEET = f"""
@@ -52,25 +52,25 @@ QLabel {{
 }}
 
 QLabel#title {{
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: {COLORS["text"]};
 }}
 
 QLabel#subtitle {{
-    font-size: 12px;
+    font-size: 13px;
     color: {COLORS["text_secondary"]};
 }}
 
 QLabel#sectionLabel {{
-    font-size: 10px;
-    font-weight: 600;
-    color: {COLORS["text_secondary"]};
-    letter-spacing: 1.5px;
+    font-size: 11px;
+    font-weight: 700;
+    color: {COLORS["text"]};
+    letter-spacing: 1px;
 }}
 
 QLabel#folderPath {{
-    font-size: 12px;
+    font-size: 13px;
     color: {COLORS["text"]};
     padding: 10px 14px;
     background-color: {COLORS["surface"]};
@@ -79,7 +79,7 @@ QLabel#folderPath {{
 }}
 
 QLabel#folderPathEmpty {{
-    font-size: 12px;
+    font-size: 13px;
     color: {COLORS["text_secondary"]};
     padding: 10px 14px;
     background-color: {COLORS["surface"]};
@@ -95,28 +95,28 @@ QLabel#statsLabel {{
 }}
 
 QLabel#heicCount {{
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 700;
     color: {COLORS["accent"]};
 }}
 
 QLabel#heicUnit {{
-    font-size: 12px;
-    color: {COLORS["text_secondary"]};
+    font-size: 13px;
+    color: {COLORS["text"]};
 }}
 
 QLabel#statusLabel {{
-    font-size: 12px;
+    font-size: 13px;
     color: {COLORS["text_secondary"]};
     padding: 2px 0;
 }}
 
 QPushButton#folderBtn {{
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: {COLORS["accent"]};
     background-color: {COLORS["surface"]};
-    border: 1px solid {COLORS["accent"]};
+    border: 2px solid {COLORS["accent"]};
     border-radius: 6px;
     padding: 10px 18px;
 }}
@@ -127,13 +127,13 @@ QPushButton#folderBtn:hover {{
 }}
 
 QPushButton#convertBtn {{
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     color: #ffffff;
     background-color: {COLORS["accent"]};
     border: none;
     border-radius: 8px;
-    padding: 12px 48px;
+    padding: 14px 52px;
 }}
 
 QPushButton#convertBtn:hover {{
@@ -205,8 +205,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Convertidor HEIC → JPG")
-        self.setMinimumSize(480, 540)
-        self.resize(500, 580)
+        self.setMinimumSize(480, 470)
+        self.resize(500, 480)
 
         self.input_folder: Path | None = None
         self.output_folder: Path | None = None
@@ -306,7 +306,7 @@ class MainWindow(QMainWindow):
         self.heic_count_label.setObjectName("heicCount")
         stats_layout.addWidget(self.heic_count_label)
 
-        heic_unit = QLabel("imágenes HEIC\npara convertir")
+        heic_unit = QLabel("imágenes HEIC para convertir")
         heic_unit.setObjectName("heicUnit")
         stats_layout.addWidget(heic_unit)
 
