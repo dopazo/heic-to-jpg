@@ -2,6 +2,12 @@
 
 Aplicación de escritorio para convertir imágenes HEIC (formato de iPhone) a JPG. Interfaz simple en español, pensada para usuarios no técnicos.
 
+![Convertidor HEIC a JPG](image/heic-to-jpg.png)
+
+## Descarga
+
+Descarga el ejecutable directamente desde la sección de [Releases](https://github.com/dopazo/heic-to-jpg/releases) — no requiere instalar Python ni ninguna dependencia.
+
 ## Funcionalidades
 
 - Convierte archivos `.heic` / `.heif` a `.jpg` con calidad 95% (casi sin pérdidas, resolución original preservada). Los JPG resultantes suelen pesar más que los HEIC originales, ya que HEIC usa una compresión más eficiente que JPEG
