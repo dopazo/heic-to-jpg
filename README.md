@@ -4,7 +4,7 @@ Aplicación de escritorio para convertir imágenes HEIC (formato de iPhone) a JP
 
 ## Funcionalidades
 
-- Convierte archivos `.heic` / `.heif` a `.jpg` con calidad 95%
+- Convierte archivos `.heic` / `.heif` a `.jpg` con calidad 95% (casi sin pérdidas, resolución original preservada). Los JPG resultantes suelen pesar más que los HEIC originales, ya que HEIC usa una compresión más eficiente que JPEG
 - Procesa carpetas completas de forma recursiva, manteniendo la estructura de subcarpetas
 - Copia sin modificar los archivos que no sean HEIC (otras imágenes, videos, etc.)
 - Manejo de duplicados: si ya existe un archivo con el mismo nombre, agrega sufijo `_2`, `_3`, etc.
