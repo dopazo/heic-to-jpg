@@ -28,13 +28,21 @@ uv sync
 uv run python main.py
 ```
 
-## Generar ejecutable (.exe)
+## Generar ejecutable
 
 ```bash
 uv run pyinstaller --onefile --windowed --name "Convertidor_HEIC" --clean main.py
 ```
 
-El ejecutable se genera en `dist/Convertidor_HEIC.exe`.
+El ejecutable se genera en la carpeta `dist/`, con el nombre según la plataforma:
+
+| Plataforma | Archivo generado |
+|------------|-----------------|
+| Windows    | `dist/Convertidor_HEIC.exe` |
+| Linux      | `dist/Convertidor_HEIC` |
+| macOS      | `dist/Convertidor_HEIC` |
+
+> En Linux, `pillow-heif` requiere `libheif` instalada en el sistema (`sudo apt install libheif1` en Ubuntu/Debian).
 
 ## Dependencias
 
