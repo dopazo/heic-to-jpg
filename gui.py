@@ -95,7 +95,7 @@ QLabel#statsLabel {{
 }}
 
 QLabel#heicCount {{
-    font-size: 34px;
+    font-size: 20px;
     font-weight: 700;
     color: {COLORS["accent"]};
 }}
@@ -205,8 +205,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Convertidor HEIC → JPG")
-        self.setMinimumSize(480, 470)
-        self.resize(500, 480)
+        self.setMinimumSize(480, 490)
+        self.resize(500, 490)
 
         self.input_folder: Path | None = None
         self.output_folder: Path | None = None
